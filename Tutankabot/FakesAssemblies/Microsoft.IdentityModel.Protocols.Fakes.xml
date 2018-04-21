@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.IdentityModel.Protocols.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage">
+            <summary>Tipo de correcciones de compatibilidad (shim) de Microsoft.IdentityModel.Protocols.AuthenticationProtocolMessage</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.#ctor(Microsoft.IdentityModel.Protocols.AuthenticationProtocolMessage)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.BuildFormPost">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.BuildFormPost()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.BuildRedirectUrl">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.BuildRedirectUrl()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.GetParameterString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.GetParameter(String parameter)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.IssuerAddressGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_IssuerAddress()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.IssuerAddressSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_IssuerAddress(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.ParametersGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_Parameters()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.PostTitleGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_PostTitle()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.PostTitleSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_PostTitle(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.RemoveParameterString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.RemoveParameter(String parameter)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.ScriptButtonTextGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_ScriptButtonText()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.ScriptButtonTextSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_ScriptButtonText(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.ScriptDisabledTextGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_ScriptDisabledText()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.ScriptDisabledTextSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_ScriptDisabledText(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.SetParameterStringString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.SetParameter(String parameter, String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.AllInstances.SetParametersNameValueCollection">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.SetParameters(NameValueCollection nameValueCollection)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.BuildFormPost">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.BuildFormPost()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.BuildRedirectUrl">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.BuildRedirectUrl()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.Constructor">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.AuthenticationProtocolMessage()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.GetParameterString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.GetParameter(String parameter)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.IssuerAddressGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_IssuerAddress()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.IssuerAddressSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_IssuerAddress(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.ParametersGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_Parameters()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.PostTitleGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_PostTitle()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.PostTitleSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_PostTitle(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.RemoveParameterString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.RemoveParameter(String parameter)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.ScriptButtonTextGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_ScriptButtonText()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.ScriptButtonTextSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_ScriptButtonText(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.ScriptDisabledTextGet">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.get_ScriptDisabledText()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.ScriptDisabledTextSetString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.set_ScriptDisabledText(String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.SetParameterStringString">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.SetParameter(String parameter, String value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimAuthenticationProtocolMessage.SetParametersNameValueCollection">
+            <summary>Establecer el shim de AuthenticationProtocolMessage.SetParameters(NameValueCollection nameValueCollection)</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1">
+            <summary>Tipo de correcciones de compatibilidad (shim) de Microsoft.IdentityModel.Protocols.ConfigurationManager`1</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.#ctor(Microsoft.IdentityModel.Protocols.ConfigurationManager{`0})">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.AutomaticRefreshIntervalGet">
+            <summary>Establecer el shim de ConfigurationManager`1.get_AutomaticRefreshInterval()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.AutomaticRefreshIntervalSetTimeSpan">
+            <summary>Establecer el shim de ConfigurationManager`1.set_AutomaticRefreshInterval(TimeSpan value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.GetConfigurationAsync">
+            <summary>Establecer el shim de ConfigurationManager`1.GetConfigurationAsync()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.GetConfigurationAsyncCancellationToken">
+            <summary>Establecer el shim de ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.RefreshIntervalGet">
+            <summary>Establecer el shim de ConfigurationManager`1.get_RefreshInterval()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.RefreshIntervalSetTimeSpan">
+            <summary>Establecer el shim de ConfigurationManager`1.set_RefreshInterval(TimeSpan value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AllInstances.RequestRefresh">
+            <summary>Establecer el shim de ConfigurationManager`1.RequestRefresh()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AutomaticRefreshIntervalGet">
+            <summary>Establecer el shim de ConfigurationManager`1.get_AutomaticRefreshInterval()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.AutomaticRefreshIntervalSetTimeSpan">
+            <summary>Establecer el shim de ConfigurationManager`1.set_AutomaticRefreshInterval(TimeSpan value)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.Bind(Microsoft.IdentityModel.Protocols.IConfigurationManager{`0})">
+            <summary>Asocia los miembros de la interfaz a las correcciones de compatibilidad (shim).</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.ConstructorStringIConfigurationRetrieverOfT0">
+            <summary>Establecer el shim de ConfigurationManager`1.ConfigurationManager`1(String metadataAddress, IConfigurationRetriever`1&lt;!0&gt; configRetriever)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.ConstructorStringIConfigurationRetrieverOfT0HttpClient">
+            <summary>Establecer el shim de ConfigurationManager`1.ConfigurationManager`1(String metadataAddress, IConfigurationRetriever`1&lt;!0&gt; configRetriever, HttpClient httpClient)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.ConstructorStringIConfigurationRetrieverOfT0IDocumentRetriever">
+            <summary>Establecer el shim de ConfigurationManager`1.ConfigurationManager`1(String metadataAddress, IConfigurationRetriever`1&lt;!0&gt; configRetriever, IDocumentRetriever docRetriever)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.GetConfigurationAsync">
+            <summary>Establecer el shim de ConfigurationManager`1.GetConfigurationAsync()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.GetConfigurationAsyncCancellationToken">
+            <summary>Establecer el shim de ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.RefreshIntervalGet">
+            <summary>Establecer el shim de ConfigurationManager`1.get_RefreshInterval()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.RefreshIntervalSetTimeSpan">
+            <summary>Establecer el shim de ConfigurationManager`1.set_RefreshInterval(TimeSpan value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.RequestRefresh">
+            <summary>Establecer el shim de ConfigurationManager`1.RequestRefresh()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimConfigurationManager`1.StaticConstructor">
+            <summary>Establecer el shim de ConfigurationManager`1.ConfigurationManager`1()</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever">
+            <summary>Tipo de correcciones de compatibilidad (shim) de Microsoft.IdentityModel.Protocols.FileDocumentRetriever</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.#ctor(Microsoft.IdentityModel.Protocols.FileDocumentRetriever)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.AllInstances.GetDocumentAsyncStringCancellationToken">
+            <summary>Establecer el shim de FileDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.Bind(Microsoft.IdentityModel.Protocols.IDocumentRetriever)">
+            <summary>Asocia los miembros de la interfaz a las correcciones de compatibilidad (shim).</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.Constructor">
+            <summary>Establecer el shim de FileDocumentRetriever.FileDocumentRetriever()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimFileDocumentRetriever.GetDocumentAsyncStringCancellationToken">
+            <summary>Establecer el shim de FileDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever">
+            <summary>Tipo de correcciones de compatibilidad (shim) de Microsoft.IdentityModel.Protocols.HttpDocumentRetriever</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.#ctor(Microsoft.IdentityModel.Protocols.HttpDocumentRetriever)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.AllInstances.GetDocumentAsyncStringCancellationToken">
+            <summary>Establecer el shim de HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.AllInstances.RequireHttpsGet">
+            <summary>Establecer el shim de HttpDocumentRetriever.get_RequireHttps()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.AllInstances.RequireHttpsSetBoolean">
+            <summary>Establecer el shim de HttpDocumentRetriever.set_RequireHttps(Boolean value)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.Bind(Microsoft.IdentityModel.Protocols.IDocumentRetriever)">
+            <summary>Asocia los miembros de la interfaz a las correcciones de compatibilidad (shim).</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.Constructor">
+            <summary>Establecer el shim de HttpDocumentRetriever.HttpDocumentRetriever()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.ConstructorHttpClient">
+            <summary>Establecer el shim de HttpDocumentRetriever.HttpDocumentRetriever(HttpClient httpClient)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.GetDocumentAsyncStringCancellationToken">
+            <summary>Establecer el shim de HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.RequireHttpsGet">
+            <summary>Establecer el shim de HttpDocumentRetriever.get_RequireHttps()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.RequireHttpsSetBoolean">
+            <summary>Establecer el shim de HttpDocumentRetriever.set_RequireHttps(Boolean value)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimHttpDocumentRetriever.StaticConstructor">
+            <summary>Establecer el shim de HttpDocumentRetriever.HttpDocumentRetriever()</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1">
+            <summary>Tipo de correcciones de compatibilidad (shim) de Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.#ctor(Microsoft.IdentityModel.Protocols.StaticConfigurationManager{`0})">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.AllInstances.GetConfigurationAsyncCancellationToken">
+            <summary>Establecer el shim de StaticConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.AllInstances.RequestRefresh">
+            <summary>Establecer el shim de StaticConfigurationManager`1.RequestRefresh()</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.Bind(Microsoft.IdentityModel.Protocols.IConfigurationManager{`0})">
+            <summary>Asocia los miembros de la interfaz a las correcciones de compatibilidad (shim).</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.ConstructorT0">
+            <summary>Establecer el shim de StaticConfigurationManager`1.StaticConfigurationManager`1(!0 configuration)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.GetConfigurationAsyncCancellationToken">
+            <summary>Establecer el shim de StaticConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimStaticConfigurationManager`1.RequestRefresh">
+            <summary>Establecer el shim de StaticConfigurationManager`1.RequestRefresh()</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode">
+            <summary>Tipo de correcciones de compatibilidad (shim) de Microsoft.IdentityModel.Protocols.X509CertificateValidationMode</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.#ctor(Microsoft.IdentityModel.Protocols.X509CertificateValidationMode)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.ShimX509CertificateValidationMode.Constructor">
+            <summary>Establecer el shim de X509CertificateValidationMode.X509CertificateValidationMode()</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.AuthenticationProtocolMessage</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.#ctor">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.BuildFormPost">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.BuildFormPost()</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.BuildFormPost01">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.BuildFormPost()</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.BuildRedirectUrl">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.BuildRedirectUrl()</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.BuildRedirectUrl01">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.BuildRedirectUrl()</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.GetParameter(System.String)">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.GetParameter(String parameter)</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.GetParameterString">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.GetParameter(String parameter)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubAuthenticationProtocolMessage</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.RemoveParameter(System.String)">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.RemoveParameter(String parameter)</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.RemoveParameterString">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.RemoveParameter(String parameter)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.SetParameters(System.Collections.Specialized.NameValueCollection)">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.SetParameters(NameValueCollection nameValueCollection)</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubAuthenticationProtocolMessage.SetParametersNameValueCollection">
+            <summary>Establecer el stub de AuthenticationProtocolMessage.SetParameters(NameValueCollection nameValueCollection)</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.ConfigurationManager`1</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0})">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},Microsoft.IdentityModel.Protocols.IDocumentRetriever)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.#ctor(System.String,Microsoft.IdentityModel.Protocols.IConfigurationRetriever{`0},System.Net.Http.HttpClient)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubConfigurationManager</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubConfigurationManager`1.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubFileDocumentRetriever">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.FileDocumentRetriever</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubFileDocumentRetriever.#ctor">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubFileDocumentRetriever.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubFileDocumentRetriever.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubFileDocumentRetriever</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubFileDocumentRetriever.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubFileDocumentRetriever.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.HttpDocumentRetriever</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever.#ctor">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever.#ctor(System.Net.Http.HttpClient)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubHttpDocumentRetriever</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubHttpDocumentRetriever.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationManager`1">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.IConfigurationManager`1</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationManager`1.#ctor">
+            <summary>Inicializa una nueva instancia de type StubIConfigurationManager</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationManager`1.GetConfigurationAsyncCancellationToken">
+            <summary>Establecer el stub de IConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationManager`1.Microsoft#IdentityModel#Protocols#IConfigurationManager{T}#GetConfigurationAsync(System.Threading.CancellationToken)">
+            <summary>Establecer el stub de IConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationManager`1.Microsoft#IdentityModel#Protocols#IConfigurationManager{T}#RequestRefresh">
+            <summary>Establecer el stub de IConfigurationManager`1.RequestRefresh()</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationManager`1.RequestRefresh">
+            <summary>Establecer el stub de IConfigurationManager`1.RequestRefresh()</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationRetriever`1">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.IConfigurationRetriever`1</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationRetriever`1.#ctor">
+            <summary>Inicializa una nueva instancia de type StubIConfigurationRetriever</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationRetriever`1.GetConfigurationAsyncStringIDocumentRetrieverCancellationToken">
+            <summary>Establecer el stub de IConfigurationRetriever`1.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIConfigurationRetriever`1.Microsoft#IdentityModel#Protocols#IConfigurationRetriever{T}#GetConfigurationAsync(System.String,Microsoft.IdentityModel.Protocols.IDocumentRetriever,System.Threading.CancellationToken)">
+            <summary>Establecer el stub de IConfigurationRetriever`1.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubIDocumentRetriever">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.IDocumentRetriever</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIDocumentRetriever.#ctor">
+            <summary>Inicializa una nueva instancia de type StubIDocumentRetriever</summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Protocols.Fakes.StubIDocumentRetriever.GetDocumentAsyncStringCancellationToken">
+            <summary>Establecer el stub de IDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubIDocumentRetriever.Microsoft#IdentityModel#Protocols#IDocumentRetriever#GetDocumentAsync(System.String,System.Threading.CancellationToken)">
+            <summary>Establecer el stub de IDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubStaticConfigurationManager`1">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.StaticConfigurationManager`1</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubStaticConfigurationManager`1.#ctor(`0)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubStaticConfigurationManager`1.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubStaticConfigurationManager`1.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubStaticConfigurationManager</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubStaticConfigurationManager`1.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubStaticConfigurationManager`1.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.Fakes.StubX509CertificateValidationMode">
+            <summary>Tipo stub de Microsoft.IdentityModel.Protocols.X509CertificateValidationMode</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubX509CertificateValidationMode.#ctor">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubX509CertificateValidationMode.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.Fakes.StubX509CertificateValidationMode.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubX509CertificateValidationMode</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubX509CertificateValidationMode.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.Fakes.StubX509CertificateValidationMode.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+    </members>
+</doc>
