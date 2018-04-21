@@ -142,3 +142,5 @@ C:\Users\Sergio\source\repos\Tutankabot\Tutankabot\obj\Debug\Tutankabot.csproj.C
 C:\Users\Sergio\source\repos\Tutankabot\Tutankabot\obj\Debug\Tutankabot.csproj.CopyComplete
 C:\Users\Sergio\source\repos\Tutankabot\Tutankabot\obj\Debug\Bot Application.dll
 C:\Users\Sergio\source\repos\Tutankabot\Tutankabot\obj\Debug\Bot Application.pdb
+C:\Users\Sergio\source\repos\Tutankabot\Tutankabot\obj\Debug\Tutankabot.csprojFakesResolveAssemblyReference.cache
+C:\Users\Sergio\source\repos\Tutankabot\Tutankabot\obj\Debug\Tutankabot.csprojResolveAssemblyReference.cache

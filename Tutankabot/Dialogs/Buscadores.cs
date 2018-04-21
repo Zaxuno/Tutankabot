@@ -61,12 +61,7 @@ namespace Buscadores
         {
             try
             {
-<<<<<<< HEAD
                 context.PostAsync(Dialogos.MensajeAleatorio(Dialogos.msg_Descargando));
-=======
-                
->>>>>>> 58085e2a44f63f63e43fc0612c2b9720b06aa0f9
-
                 //Llamamos a la clase YouTube
                 YouTube youTube = YouTube.Default;
                 //Obtenemos el objeto del Video
@@ -74,28 +69,9 @@ namespace Buscadores
 
                 //Generamos la ruta de descarga (video.FullName incluye .mp4)
                 String strFileDestination = (System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + @"temp\" + video.FullName).Replace(" ", "");
-
-<<<<<<< HEAD
-=======
-                // Creamos una instancia de la clase BackgroundWorker
-                bw = new BackgroundWorker();
-
-                // Queremos tener la posibilidad de cancelar el proceso usando bw.CancelAsync().
-                bw.WorkerSupportsCancellation = true;
-
-                // DoWork es el hilo en donde se va a realizar la operación.
-                bw.DoWork += bw_IniciarTarea;
-
-                // Una vez que ya hemos configurado el backgroundWorker lo ponemos en marcha
-                bw.RunWorkerAsync("enviando");
-
->>>>>>> 58085e2a44f63f63e43fc0612c2b9720b06aa0f9
                 //Si el vídeo no existe en el directorio esribimos el archivo con los Bytes del video
                 if (!File.Exists(strFileDestination))
                 {
-                    //Mostramos un mensaje al usuario de que esta descargando...
-                    context.PostAsync(Dialogos.msg_Descargando);
-
                     //Escribimos el archivo con los bytes del video
                     File.WriteAllBytes(strFileDestination, video.GetBytes());
                 }
@@ -109,7 +85,6 @@ namespace Buscadores
 
                     //Este método se encarga de la conversión a mp3
                     Execute(ffmpegExe, String.Format("-i {0} -f mp3 -ab 256000 -vn {1}", strFileDestination, strFileDestination + ".mp3"));
-
 
                     //Eliminamos el archivo .mp4
                     File.Delete(strFileDestination);

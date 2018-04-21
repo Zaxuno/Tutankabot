@@ -57,12 +57,7 @@ namespace Weedapopbot.Dialogs
                     }
                     catch(Exception e)
                     {
-<<<<<<< HEAD
-                        //Cuando se produce un error
-                        await context.PostAsync(String.Format(Dialogos.msg_ErrorDescargaAudio,e.Message+e.Source+e.StackTrace));
-=======
                         await context.PostAsync(String.Format(Dialogos.msg_ErrorDescargaAudio));
->>>>>>> 58085e2a44f63f63e43fc0612c2b9720b06aa0f9
                     }
                     descargarMusica = false;
                 }
