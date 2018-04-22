@@ -23,7 +23,6 @@ namespace Buscadores
         public YouTubeRequestSettings settings;         //Inicializamos las YouTubeSettings
         public YouTubeRequest request;                  //Inicializamos las YouTubeRequest
         public IDialogContext context;                  //Este es el contexto de la aplicación
-        public BackgroundWorker bw;                     //El trabajador de tareas en segundo plano
 
         //Constructor principal
         public Buscador(string textoABuscar, int resultados, ref IDialogContext context){
@@ -57,7 +56,7 @@ namespace Buscadores
         }
 
         //Este método descarga el vídeo en base a un link, le pasamos también el contexto para poder enviar los mensajes a la conversación
-        public string DescargarVideo(String link, String calidad)
+        public string DescargarVideo(String link, String calidad, Boolean musica)
         {
             try
             {
@@ -76,30 +75,34 @@ namespace Buscadores
                     File.WriteAllBytes(strFileDestination, video.GetBytes());
                 }
 
-                //Si no existe el archivo .mp3
-                if (!File.Exists($"{strFileDestination}.mp3"))
+                if (musica)
                 {
+                    //Si no existe el archivo .mp3
+                    if (!File.Exists($"{strFileDestination}.mp3"))
+                    {
 
-                    //Variable con la ruta del ejecutable de ffmpeg.exe
-                    String ffmpegExe = (System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + @"bin\ffmpeg.exe");
+                        //Variable con la ruta del ejecutable de ffmpeg.exe
+                        String ffmpegExe = (System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + @"bin\ffmpeg.exe");
 
-                    //Este método se encarga de la conversión a mp3
-                    Execute(ffmpegExe, String.Format("-i {0} -f mp3 -ab {1} -vn {2}", strFileDestination, calidad, strFileDestination + ".mp3"));
+                        //Este método se encarga de la conversión a mp3
+                        Execute(ffmpegExe, String.Format("-i {0} -f mp3 -ab {1} -vn {2}", strFileDestination, calidad, strFileDestination + ".mp3"));
 
-                    //Eliminamos el archivo .mp4
-                    File.Delete(strFileDestination);
+                        //Eliminamos el archivo .mp4
+                        File.Delete(strFileDestination);
 
+                    }
+
+                    //Devolvemos la ruta del enlace
+                    return (video.FullName + ".mp3").Replace(" ", "");
                 }
-
-                //Devolvemos la ruta del enlace
-                return (video.FullName+ ".mp3").Replace(" ", "");
+                else
+                {
+                    //Devolvemos la ruta del enlace
+                    return (video.FullName).Replace(" ", "");
+                }
             }
             catch
             {
-                //Salimos de la tarea en segundo plano
-                bw.CancelAsync();
-                bw.Dispose();
-
                 //En caso de error devolvemos un mensaje
                 return Dialogos.msg_ErrorDescargaAudio;
             }

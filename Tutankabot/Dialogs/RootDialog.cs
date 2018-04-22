@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using Buscadores;
 using Microsoft.Bot.Builder.Dialogs;
@@ -121,13 +123,21 @@ namespace Weedapopbot.Dialogs
                 VideoInformation urlVideoEncontrado = buscador.BuscarVideos();
 
                 //Obtenemos la ruta donde se ha descargado de manera temporal el mp3
-                String rutaDelMP3 = buscador.DescargarVideo(urlVideoEncontrado.Url, calidad);
+                String rutaDelMP3 = buscador.DescargarVideo(urlVideoEncontrado.Url, calidad, true);
                 
                 //Creamos el adjunto con la ruta y la url del vídeo
                 Attachment adjunto = Dialogos.AdjuntarAudio(rutaDelMP3, urlVideoEncontrado);
 
                 //Ahora añadimos nuestros adjuntos al mensaje
                 mensajeDelAdjunto.Attachments = new List<Attachment> { adjunto };
+
+                ArrayList listaArgumentos = new ArrayList { adjunto };
+                BackgroundWorker bw_DDelMusica = new BackgroundWorker                          //Creamos una tarea en segundo plano
+                {
+                    WorkerSupportsCancellation = true                                        //Permitimos que se pueda cancelar con bw.CancelAsync()
+                };
+                bw_DDelMusica.DoWork += bw_DDelMusica_IniciarTarea;                               //Definimos cual es el método que iniciará la tarea
+                bw_DDelMusica.RunWorkerAsync(listaArgumentos);                                 //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
 
                 return mensajeDelAdjunto;
             }
@@ -140,6 +150,16 @@ namespace Weedapopbot.Dialogs
             return mensajeDelAdjunto;
         }
 
+        private void bw_DDelMusica_IniciarTarea(object sender, DoWorkEventArgs e)
+        {
+            //Hacemos un "CAST" a los argumentos para indicar que es un ArrayList
+            ArrayList listaArgumentos = (ArrayList)e.Argument;
 
+            Attachment adjunto = (Attachment)listaArgumentos[0];
+            Thread.Sleep(300000);
+            String strFileDestination = (System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + @"temp\" + adjunto.ContentUrl.Replace("https://weedmebot.azurewebsites.net/temp/", "")).Replace(" ", "");
+            File.Delete(strFileDestination);
+
+        }
     }
 }
