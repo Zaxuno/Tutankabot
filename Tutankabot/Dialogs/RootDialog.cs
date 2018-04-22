@@ -137,7 +137,8 @@ namespace Weedapopbot.Dialogs
                     WorkerSupportsCancellation = true                                        //Permitimos que se pueda cancelar con bw.CancelAsync()
                 };
                 bw_DDelMusica.DoWork += bw_DDelMusica_IniciarTarea;                               //Definimos cual es el método que iniciará la tarea
-                bw_DDelMusica.RunWorkerAsync(listaArgumentos);                                 //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
+                bw_DDelMusica.RunWorkerAsync(listaArgumentos);
+                mensajeDelAdjunto.Text = Dialogos.msg_DescargaMensaje;                              //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
 
                 return mensajeDelAdjunto;
             }

@@ -18,6 +18,7 @@ namespace Weedapopbot.Dialogs
         public static String msg_EscribeCancion = "Dime el nombre de la canción junto con su artista.";
         public static String msg_CalidadCancion = "Selecciona la calidad de la canción";
         public static String msg_ErrorDescargaAudio = "Me he encontrado con un fallo y he tropezado.";
+        public static String msg_DescargaMensaje = "En 5 minutos borraré el mp3 de mi memoria ¡Descargalo!.";
 
 
         public static String[] msg_Descargando = File.ReadAllLines(rutaRoot + @"\textos\msg_Descargando.txt");
