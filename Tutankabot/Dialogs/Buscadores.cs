@@ -57,7 +57,7 @@ namespace Buscadores
         }
 
         //Este método descarga el vídeo en base a un link, le pasamos también el contexto para poder enviar los mensajes a la conversación
-        public string DescargarVideo(String link)
+        public string DescargarVideo(String link, String calidad)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace Buscadores
                     String ffmpegExe = (System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + @"bin\ffmpeg.exe");
 
                     //Este método se encarga de la conversión a mp3
-                    Execute(ffmpegExe, String.Format("-i {0} -f mp3 -ab 256000 -vn {1}", strFileDestination, strFileDestination + ".mp3"));
+                    Execute(ffmpegExe, String.Format("-i {0} -f mp3 -ab {1} -vn {2}", strFileDestination, calidad, strFileDestination + ".mp3"));
 
                     //Eliminamos el archivo .mp4
                     File.Delete(strFileDestination);

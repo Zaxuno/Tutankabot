@@ -16,6 +16,7 @@ namespace Weedapopbot.Dialogs
         //Mensajes
         public static String msg_Bienvenida = "Hola {0}, mi nombre es Tutankabot, estoy aquí para ayudarte, pero mis limitaciones ahora mismo se basan en contar chistes y descargar música.\n¡Pideme cualquiera de las dos!";
         public static String msg_EscribeCancion = "Dime el nombre de la canción junto con su artista.";
+        public static String msg_CalidadCancion = "Selecciona la calidad de la canción";
         public static String msg_ErrorDescargaAudio = "Me he encontrado con un fallo y he tropezado.";
 
 
@@ -26,6 +27,7 @@ namespace Weedapopbot.Dialogs
         public static String[] ord_Cuentame = File.ReadAllLines(rutaRoot + @"\textos\ord_Cuentame.txt");
         public static String[] ord_DescargaM = File.ReadAllLines(rutaRoot + @"\textos\ord_DescargaM.txt");
         public static String[] ord_Musica = File.ReadAllLines(rutaRoot + @"\textos\ord_Musica.txt");
+        public static String[] ord_CalidadAudio = {"128","192","256","320"};
 
         //Chistes
         public static String[] lst_Chiste = File.ReadAllLines(rutaRoot + @"\textos\lst_Chistes.txt");
@@ -74,6 +76,18 @@ namespace Weedapopbot.Dialogs
             foreach (String str1 in orden1)
             {
                 if (mensaje.Contains(str1)) return true;
+            }
+
+            return false;
+        }
+
+        //Comprueba si un mensaje contiene alguna orden
+        public static Boolean ComprobarMensaje(ref String calidad, String[] orden1)
+        {
+            calidad = QuitarAcentos(calidad);
+            foreach (String str1 in orden1)
+            {
+                if (calidad.Contains(str1)) { calidad = str1;  return true; }
             }
 
             return false;
@@ -169,6 +183,28 @@ namespace Weedapopbot.Dialogs
 
         }
 
+        public static IMessageActivity MenuCalidadCancion(ref IDialogContext context)
+        {
+            IMessageActivity mensaje = context.MakeMessage();
+            mensaje.Type = "message";
+
+            List<CardAction> botones = BotonesMenuCalidadCancion();
+
+            HeroCard plCard = new HeroCard()
+            {
+                Title = "Selecciona la calidad del audio",
+                Buttons = botones,
+            };
+
+            Attachment plAttachment = plCard.ToAttachment();
+            mensaje.Attachments.Add(plAttachment);
+
+            //Layout tipo lista
+            mensaje.AttachmentLayout = "list";
+            return mensaje;
+
+        }
+
         private static List<CardAction> BotonesMenuInicial()
 
         {
@@ -189,6 +225,46 @@ namespace Weedapopbot.Dialogs
 
             botones.Add(btnChiste);
             botones.Add(btnDescargar);
+
+            return botones;
+        }
+
+        private static List<CardAction> BotonesMenuCalidadCancion()
+
+        {
+            List<CardAction> botones = new List<CardAction>();
+            CardAction btn128 = new CardAction()
+            {
+                Type = "imBack",
+                Title = "128kbps",
+                Value = "128kbps"
+            };
+
+            CardAction btn192 = new CardAction()
+            {
+                Type = "imBack",
+                Title = "192kbps",
+                Value = "192kbps"
+            };
+
+            CardAction btn256 = new CardAction()
+            {
+                Type = "imBack",
+                Title = "256kbps",
+                Value = "256kbps"
+            };
+
+            CardAction btn320 = new CardAction()
+            {
+                Type = "imBack",
+                Title = "320kbps",
+                Value = "320kbps"
+            };
+
+            botones.Add(btn128);
+            botones.Add(btn192);
+            botones.Add(btn256);
+            botones.Add(btn320);
 
             return botones;
         }

@@ -15,6 +15,8 @@ namespace Weedapopbot.Dialogs
     {
 
         private bool descargarMusica;
+        private bool escribirMusica;
+        private String musicaABuscar;
 
         public Task StartAsync(IDialogContext context)
         {
@@ -36,30 +38,48 @@ namespace Weedapopbot.Dialogs
             //Si pregunta por una descarga de musica
             else if (Dialogos.ComprobarMensaje(activity.Text, Dialogos.ord_DescargaM, Dialogos.ord_Musica))
             {
-                descargarMusica = true;
+                escribirMusica = true;
                 await context.PostAsync(String.Format(Dialogos.msg_EscribeCancion));
             }
             else
             {
-                if (descargarMusica)
+                if (escribirMusica)
                 {
-                    try
+                    if (!descargarMusica)
                     {
-                        
-                        ArrayList listaArgumentos = new ArrayList { context, activity };            //Creamos una lista de argumentos para enviar al método
-                        BackgroundWorker bw_DMusica = new BackgroundWorker                          //Creamos una tarea en segundo plano
+                        descargarMusica = true;
+                        musicaABuscar = activity.Text;
+                        await context.PostAsync(Dialogos.MenuCalidadCancion(ref context));
+                    }
+                    else
+                    {
+                        try
                         {
-                            WorkerSupportsCancellation = true                                        //Permitimos que se pueda cancelar con bw.CancelAsync()
-                        };                       
-                        bw_DMusica.DoWork += Bw_DMusica_IniciarTarea;                               //Definimos cual es el método que iniciará la tarea
-                        bw_DMusica.RunWorkerAsync(listaArgumentos);                                 //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
+                            String calidad = "320kbps";
 
+                            if(Dialogos.ComprobarMensaje(ref calidad, Dialogos.ord_CalidadAudio))
+                            {
+                                ArrayList listaArgumentos = new ArrayList { context, activity, calidad };            //Creamos una lista de argumentos para enviar al método
+                                BackgroundWorker bw_DMusica = new BackgroundWorker                          //Creamos una tarea en segundo plano
+                                {
+                                    WorkerSupportsCancellation = true                                        //Permitimos que se pueda cancelar con bw.CancelAsync()
+                                };
+                                bw_DMusica.DoWork += Bw_DMusica_IniciarTarea;                               //Definimos cual es el método que iniciará la tarea
+                                bw_DMusica.RunWorkerAsync(listaArgumentos);                                 //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
+                            }
+
+
+
+                        }
+                        catch (Exception e)
+                        {
+                            await context.PostAsync(String.Format(Dialogos.msg_ErrorDescargaAudio));
+                        }
+
+                        descargarMusica = false;
+                        escribirMusica = false;
                     }
-                    catch(Exception e)
-                    {
-                        await context.PostAsync(String.Format(Dialogos.msg_ErrorDescargaAudio));
-                    }
-                    descargarMusica = false;
+
                 }
                 else { await context.PostAsync(Dialogos.MenuInicial(ref context)); }
                
@@ -79,12 +99,13 @@ namespace Weedapopbot.Dialogs
             //Desmenuzamos la lista
             IDialogContext context = (IDialogContext)listaArgumentos[0];
             Activity activity = (Activity)listaArgumentos[1];
+            String calidad = (String)listaArgumentos[2];
 
             //Enviamos un mensaje que será generado por el metodo encargado de lanzar las descargas y compresion
-            context.PostAsync(MessageReceivedAsync_Musica(context, activity.Text, activity.From.Id,e));
+            context.PostAsync(MessageReceivedAsync_Musica(context, musicaABuscar, activity.From.Id,e, calidad));
         }
 
-        private IMessageActivity MessageReceivedAsync_Musica(IDialogContext context, String busqueda, String profile, DoWorkEventArgs e)
+        private IMessageActivity MessageReceivedAsync_Musica(IDialogContext context, String busqueda, String profile, DoWorkEventArgs e, String calidad)
         {
 
             //Creamos un mensaje que se le enivará al usuario
@@ -100,7 +121,7 @@ namespace Weedapopbot.Dialogs
                 VideoInformation urlVideoEncontrado = buscador.BuscarVideos();
 
                 //Obtenemos la ruta donde se ha descargado de manera temporal el mp3
-                String rutaDelMP3 = buscador.DescargarVideo(urlVideoEncontrado.Url);
+                String rutaDelMP3 = buscador.DescargarVideo(urlVideoEncontrado.Url, calidad);
                 
                 //Creamos el adjunto con la ruta y la url del vídeo
                 Attachment adjunto = Dialogos.AdjuntarAudio(rutaDelMP3, urlVideoEncontrado);
