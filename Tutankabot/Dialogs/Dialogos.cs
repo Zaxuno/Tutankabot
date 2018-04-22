@@ -233,19 +233,6 @@ namespace Weedapopbot.Dialogs
 
         {
             List<CardAction> botones = new List<CardAction>();
-            CardAction btn128 = new CardAction()
-            {
-                Type = "imBack",
-                Title = "128kbps",
-                Value = "128kbps"
-            };
-
-            CardAction btn192 = new CardAction()
-            {
-                Type = "imBack",
-                Title = "192kbps",
-                Value = "192kbps"
-            };
 
             CardAction btn256 = new CardAction()
             {
@@ -260,9 +247,7 @@ namespace Weedapopbot.Dialogs
                 Title = "320kbps",
                 Value = "320kbps"
             };
-
-            botones.Add(btn128);
-            botones.Add(btn192);
+            
             botones.Add(btn256);
             botones.Add(btn320);
 
