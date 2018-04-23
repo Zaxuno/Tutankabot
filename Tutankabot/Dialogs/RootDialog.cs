@@ -21,6 +21,7 @@ namespace Weedapopbot.Dialogs
     public class RootDialog : IDialog<object>
     {
 
+        //Variables que controla el paso de la conversación
         private bool descargarMusica;
         private bool escribirMusica;
         private String musicaABuscar;
