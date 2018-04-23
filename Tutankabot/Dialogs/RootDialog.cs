@@ -10,6 +10,11 @@ using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using YoutubeSearch;
 
+//=============================================================
+//Autores: Sergio Uría e Iyan Sanz
+//Descripción: Diferencia el mensaje introducido por el usuario entre las diferentes opciones (chistes, descargar música...)
+//=============================================================
+
 namespace Weedapopbot.Dialogs
 {
     [Serializable]
@@ -41,7 +46,7 @@ namespace Weedapopbot.Dialogs
             else if (Dialogos.ComprobarMensaje(activity.Text, Dialogos.ord_DescargaM, Dialogos.ord_Musica))
             {
                 escribirMusica = true;
-                await context.PostAsync(String.Format(Dialogos.msg_EscribeCancion));
+                await context.PostAsync(Dialogos.msg_EscribeCancion);
             }
             else
             {
@@ -61,13 +66,13 @@ namespace Weedapopbot.Dialogs
 
                             if(Dialogos.ComprobarMensaje(ref calidad, Dialogos.ord_CalidadAudio))
                             {
-                                ArrayList listaArgumentos = new ArrayList { context, activity, calidad };            //Creamos una lista de argumentos para enviar al método
-                                BackgroundWorker bw_DMusica = new BackgroundWorker                          //Creamos una tarea en segundo plano
+                                ArrayList listaArgumentos = new ArrayList { context, activity, calidad };               //Creamos una lista de argumentos para enviar al método
+                                BackgroundWorker bw_DMusica = new BackgroundWorker                                      //Creamos una tarea en segundo plano
                                 {
-                                    WorkerSupportsCancellation = true                                        //Permitimos que se pueda cancelar con bw.CancelAsync()
+                                    WorkerSupportsCancellation = true                                                   //Permitimos que se pueda cancelar con bw.CancelAsync()
                                 };
-                                bw_DMusica.DoWork += Bw_DMusica_IniciarTarea;                               //Definimos cual es el método que iniciará la tarea
-                                bw_DMusica.RunWorkerAsync(listaArgumentos);                                 //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
+                                bw_DMusica.DoWork += Bw_DMusica_IniciarTarea;                                           //Definimos cual es el método que iniciará la tarea
+                                bw_DMusica.RunWorkerAsync(listaArgumentos);                                             //Mandamos iniciar la tarea mandandole nuestra lista de argumentos
                             }
 
 

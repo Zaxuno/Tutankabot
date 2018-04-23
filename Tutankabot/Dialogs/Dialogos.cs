@@ -18,7 +18,7 @@ namespace Weedapopbot.Dialogs
         public static String msg_EscribeCancion = "Dime el nombre de la canción junto con su artista.";
         public static String msg_CalidadCancion = "Selecciona la calidad de la canción";
         public static String msg_ErrorDescargaAudio = "Me he encontrado con un fallo y he tropezado.";
-        public static String msg_DescargaMensaje = "En 5 minutos borraré el mp3 de mi memoria ¡Descargalo!.";
+        public static String msg_DescargaMensaje = "En 5 minutos borraré el mp3 de mi memoria ¡Descárgalo!.";
 
 
         public static String[] msg_Descargando = File.ReadAllLines(rutaRoot + @"\textos\msg_Descargando.txt");
@@ -157,11 +157,10 @@ namespace Weedapopbot.Dialogs
         //Este método se encarga de normalizar los textos
         public static string NormalizarTexto(string texto)
         {
-
             return System.Web.HttpUtility.HtmlDecode(texto.Normalize());
-
         }
 
+        //IMessageActivity (Mensaje) para el menu inicial
         public static IMessageActivity MenuInicial(ref IDialogContext context)
         {
             IMessageActivity mensaje = context.MakeMessage();
@@ -210,6 +209,7 @@ namespace Weedapopbot.Dialogs
 
         {
             List<CardAction> botones = new List<CardAction>();
+
             CardAction btnChiste = new CardAction()
             {
                 Type = "imBack",

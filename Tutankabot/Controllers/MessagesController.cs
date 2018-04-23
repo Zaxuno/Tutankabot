@@ -16,17 +16,18 @@ namespace Weedapopbot
         public static bool descarga = false;
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
+
             if (activity.Type == ActivityTypes.Message)
             {
 
                 //await Task.Factory.StartNew(() => Conversation.SendAsync(activity, () => new Dialogs.RootDialog()));
+
                 if (Dialogos.ComprobarMensaje(activity.Text, Dialogos.ord_Cuentame, Dialogos.ord_Chiste))
                 {
                     if (!chiste)
                     {
                         await Task.Factory.StartNew(() => Conversation.SendAsync(activity, () => new Dialogs.RootDialog()));
                         chiste = true;
-                        await Task.Factory.StartNew(() => IniciarTemporizador(5));
                     }
                 }
                 else if (Dialogos.ComprobarMensaje(activity.Text, Dialogos.ord_DescargaM, Dialogos.ord_Musica))
@@ -35,13 +36,15 @@ namespace Weedapopbot
                     {
                         await Task.Factory.StartNew(() => Conversation.SendAsync(activity, () => new Dialogs.RootDialog()));
                         descarga = true;
-                        await Task.Factory.StartNew(() => IniciarTemporizador(5));
                     }
                 }
                 else
                 {
                     await Task.Factory.StartNew(() => Conversation.SendAsync(activity, () => new Dialogs.RootDialog()));
                 }
+
+
+                await Task.Factory.StartNew(() => IniciarTemporizador(5));
 
 
             }
