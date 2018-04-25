@@ -20,8 +20,8 @@ namespace Weedapopbot
             if (activity.Type == ActivityTypes.Message)
             {
 
-                //await Task.Factory.StartNew(() => Conversation.SendAsync(activity, () => new Dialogs.RootDialog()));
-
+                await Task.Factory.StartNew(() => Conversation.SendAsync(activity, () => new Dialogs.RootLuisDialog()));
+                /*
                 if (Dialogos.ComprobarMensaje(activity.Text, Dialogos.ord_Cuentame, Dialogos.ord_Chiste))
                 {
                     if (!chiste)
@@ -45,7 +45,7 @@ namespace Weedapopbot
 
 
                 await Task.Factory.StartNew(() => IniciarTemporizador(5));
-
+                */
 
             }
             else

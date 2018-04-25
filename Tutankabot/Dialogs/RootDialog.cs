@@ -16,11 +16,10 @@ using YoutubeSearch;
 //=============================================================
 
 namespace Weedapopbot.Dialogs
-{
+{ 
     [Serializable]
     public class RootDialog : IDialog<object>
     {
-
         //Variables que controla el paso de la conversación
         private bool descargarMusica;
         private bool escribirMusica;
@@ -33,6 +32,7 @@ namespace Weedapopbot.Dialogs
             return Task.CompletedTask;
         }
 
+        //Método que recoge la opción seleccionada por el usuario y lo procesa
         private async Task SeleccionDeOpciones(IDialogContext context, IAwaitable<object> result)
         {
             //Creamos la actividad
@@ -51,20 +51,25 @@ namespace Weedapopbot.Dialogs
             }
             else
             {
+                //Si ha escrito música
                 if (escribirMusica)
                 {
+                    //Si no ha empezado la descarga mostramos menú para selección de calidad
                     if (!descargarMusica)
                     {
                         descargarMusica = true;
                         musicaABuscar = activity.Text;
                         await context.PostAsync(Dialogos.MenuCalidadCancion(ref context));
                     }
+
+                    //En caso contrario, si ya ha seleccionado la calidad
                     else
                     {
                         try
                         {
-                            String calidad = "320kbps";
+                            String calidad = "320kbps";                                                                 //Calidad por defecto
 
+                            //Comprobamos si ha escrito una calidad
                             if(Dialogos.ComprobarMensaje(ref calidad, Dialogos.ord_CalidadAudio))
                             {
                                 ArrayList listaArgumentos = new ArrayList { context, activity, calidad };               //Creamos una lista de argumentos para enviar al método
@@ -79,11 +84,14 @@ namespace Weedapopbot.Dialogs
 
 
                         }
+
+                        //En caso de error mostramos mensaje de error
                         catch (Exception e)
                         {
                             await context.PostAsync(String.Format(Dialogos.msg_ErrorDescargaAudio));
                         }
 
+                        //Para volver a iniciar el bucle, ponemos las dos opciones posibles en "false"
                         descargarMusica = false;
                         escribirMusica = false;
                     }
@@ -100,7 +108,6 @@ namespace Weedapopbot.Dialogs
 
         private void Bw_DMusica_IniciarTarea(object sender, DoWorkEventArgs e)
         {
-
             //Hacemos un "CAST" a los argumentos para indicar que es un ArrayList
             ArrayList listaArgumentos = (ArrayList)e.Argument;
 
@@ -115,13 +122,11 @@ namespace Weedapopbot.Dialogs
 
         private IMessageActivity MessageReceivedAsync_Musica(IDialogContext context, String busqueda, String profile, DoWorkEventArgs e, String calidad)
         {
-
             //Creamos un mensaje que se le enivará al usuario
             IMessageActivity mensajeDelAdjunto = context.MakeMessage();
 
             try
             {
-
                 //Creamos el objeto Buscador encargado de buscar y descargar
                 Buscador buscador = new Buscador(busqueda, 1, ref context);
 

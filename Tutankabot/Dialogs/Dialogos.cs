@@ -40,7 +40,7 @@ namespace Weedapopbot.Dialogs
         {
             Random random = new Random();
             int numero = random.Next(0, mensajes.Count());
-            return mensajes[numero].Replace('\t', '\n');
+            return mensajes[numero].Replace("\t", "\n\n");
         }
 
         public static String QuitarAcentos(String str)

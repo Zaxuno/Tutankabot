@@ -87,8 +87,6 @@ namespace Buscadores
                         //Este método se encarga de la conversión a mp3
                         Execute(ffmpegExe, String.Format("-i {0} -f mp3 -ab {1} -vn {2}", strFileDestination, calidad, strFileDestination + ".mp3"));
 
-                        //Eliminamos el archivo .mp4
-                        File.Delete(strFileDestination);
 
                     }
 
