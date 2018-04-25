@@ -25,6 +25,7 @@ namespace Weedapopbot.Dialogs
         private bool escribirMusica;
         private String musicaABuscar;
 
+        //En este método empieza a correr la conversación
         public Task StartAsync(IDialogContext context)
         {
             //Llamamos a la tarea encargada de comprobar lo escrito
