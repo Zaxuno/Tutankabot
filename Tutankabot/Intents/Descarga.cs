@@ -96,7 +96,7 @@ namespace Weedapopbot.Intents
         private void ObtenerTipos()
         {
             if (TiposVideoTutorial.Contains(Tipo)) Tipo = TipoVideoTutorial;
-            if (TiposVideo.Contains(Tipo) || Visualizar) Tipo = TipoVideo;
+            else if (TiposVideo.Contains(Tipo) || Visualizar) Tipo = TipoVideo;
             else Tipo = TipoAudio;
         }
 
@@ -164,12 +164,11 @@ namespace Weedapopbot.Intents
                     ruta = buscador.DescargarVideo();
                     Attachment adjunto;
                     //Creamos el adjunto con la ruta y la url del vídeo
-                    if (Tipo.Equals("video")) adjunto = Dialogos.Adjuntar(ruta, buscador.tituloVideo, "video/mp4");
+                    if (Tipo.Equals("video") || Tipo.Equals("tutorial")) adjunto = Dialogos.Adjuntar(ruta, buscador.tituloVideo, "video/mp4");
                     else adjunto = Dialogos.Adjuntar(ruta, buscador.tituloVideo, "audio/mp3");
 
                     //Ahora añadimos nuestros adjuntos al mensaje
                     mensajeDelAdjunto.Attachments = new List<Attachment> { adjunto };
-                    mensajeDelAdjunto.Text = Dialogos.msg_DescargaMensaje;
                 }
                 else { mensajeDelAdjunto.Text = ruta; }
 
@@ -195,9 +194,10 @@ namespace Weedapopbot.Intents
             ArrayList listaArgumentos = (ArrayList)e.Argument;
 
             String ruta = (String)listaArgumentos[0];
+            //context.PostAsync(Dialogos.msg_DescargaMensaje);
             Thread.Sleep(150000);
             
-            if (Tipo.Equals("video")) File.Delete(ruta+".mp4");
+            if (Tipo.Equals("video") || Tipo.Equals("tutorial")) File.Delete(ruta+".mp4");
             else File.Delete(ruta + ".mp3");
         }
 

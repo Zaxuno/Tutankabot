@@ -120,7 +120,7 @@ namespace Buscadores
                     File.WriteAllBytes(rutaDestino + ".mp4", video.GetBytes());
                 }
 
-                if (tipo.Equals("video"))
+                if (tipo.Equals("video") || tipo.Equals("tutorial"))
                 {
                     rutaDestino = "https://weedmebot.azurewebsites.net/" + @"temp/" + (tituloVideo + calidad).Replace(" ", "");
                     return rutaDestino + ".mp4";
